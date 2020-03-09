@@ -18,7 +18,7 @@ class App extends React.Component {
         // });
         const formData = new FormData();
         formData.append('file', event.target.files[0]);
-        fetch('http://localhost:8080/upload', {
+        fetch('http://localhost:8888/upload', {
             method: 'post',
             body: formData
         }).then(res => {
