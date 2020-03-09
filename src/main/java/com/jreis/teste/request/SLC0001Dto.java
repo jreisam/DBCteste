@@ -4,8 +4,6 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Getter;
 
-import java.util.List;
-
 @Getter
 @JacksonXmlRootElement(localName = "SLC0001")
 public class SLC0001Dto {
@@ -16,7 +14,7 @@ public class SLC0001Dto {
     private String tpInf;
     private String dtMovto;
     private String dtHrSLC;
-    private List<GrupoSLC0001LiquidDto> grupoSLC0001Liquid;
+    private GrupoSLC0001LiquidDto grupoSLC0001Liquid;
 
 
     @JacksonXmlProperty(localName = "CodMsg")
@@ -51,7 +49,8 @@ public class SLC0001Dto {
 
 
     @JacksonXmlProperty(localName = "Grupo_SLC0001_Liquid")
-    public void setGrupoSLC0001Liquid(List<GrupoSLC0001LiquidDto> grupoSLC0001Liquid) {
-        this.grupoSLC0001Liquid = grupoSLC0001Liquid;
+    public void setGrupoSLC0001Liquid(GrupoSLC0001LiquidDto grupoSLC0001Liquid) {
+      this.grupoSLC0001Liquid = grupoSLC0001Liquid;
     }
+
 }

@@ -7,8 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
 
 @AllArgsConstructor
@@ -19,7 +19,7 @@ import javax.persistence.OneToOne;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SisMsg extends BaseEntity {
 
-    @OneToOne(fetch = FetchType.LAZY, targetEntity = SLC0001.class)
+    @OneToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST })
     private SLC0001 slc0001;
 
 //    @ManyToOne

@@ -1,6 +1,5 @@
 package com.jreis.teste.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jreis.teste.domain.base.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import java.util.Set;
+import javax.persistence.OneToOne;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,7 +27,6 @@ public class SLC0001 extends BaseEntity {
     //    @OneToMany(mappedBy = "slc0001", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     //    private Set<GrupoSLC0001Liquid> grupoSLC0001Liquids;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "slc0001", cascade = CascadeType.ALL)
-    private Set<GrupoSLC0001Liquid> grupoSLC0001Liquid;
+    @OneToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    private GrupoSLC0001Liquid grupoSLC0001Liquid;
 }

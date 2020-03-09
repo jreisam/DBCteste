@@ -12,7 +12,7 @@ public class GrupoSLC0001ProdtDto {
 
     private String codProdt;
 
-    private List<GrupoSLC0001LiquidProdtDto> grupoSLC0001LiquidProdt;
+    private List<GrupoSLC0001LiquidProdtDto> grupoSLC0001LiquidProdts;
 
     @JacksonXmlProperty(localName = "CodProdt")
     public void setCodProdt(String codProdt) {
@@ -20,7 +20,7 @@ public class GrupoSLC0001ProdtDto {
     }
 
     @JacksonXmlProperty(localName = "Grupo_SLC0001_LiquidProdt")
-    public void setGrupoSLC0001ProdtDto(List<GrupoSLC0001LiquidProdtDto> grupoSLC0001LiquidProdtDto) {
-        this.grupoSLC0001LiquidProdt = grupoSLC0001LiquidProdtDto;
+    public void setGrupoSLC0001ProdtDto(List<GrupoSLC0001LiquidProdtDto> grupoSLC0001LiquidProdts) {
+        this.grupoSLC0001LiquidProdts = grupoSLC0001LiquidProdts;
     }
 }

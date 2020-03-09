@@ -1,6 +1,5 @@
 package com.jreis.teste.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.jreis.teste.domain.base.BaseEntity;
 import lombok.AllArgsConstructor;
@@ -8,8 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @AllArgsConstructor
@@ -25,9 +24,7 @@ public class BcMsg extends BaseEntity {
     private String nUOp;
     private String identdEmissor;
 
-    @JsonIgnore
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     private GrupoSeq grupoSeqs;
 
   /*  @ManyToOne(fetch = FetchType.LAZY)
