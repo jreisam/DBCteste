@@ -18,7 +18,7 @@ class App extends React.Component {
         // });
         const formData = new FormData();
         formData.append('file', event.target.files[0]);
-        fetch('https://dbcjreis-app.herokuapp.com:8888/upload', {
+        fetch('https://dbcjreis-app.herokuapp.com/upload', {
             method: 'post',
             body: formData
         }).then(res => {
