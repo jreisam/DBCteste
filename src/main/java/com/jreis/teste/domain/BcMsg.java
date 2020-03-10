@@ -2,10 +2,7 @@ package com.jreis.teste.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.jreis.teste.domain.base.BaseEntity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -17,6 +14,7 @@ import javax.persistence.ManyToOne;
 @Entity
 @EqualsAndHashCode(callSuper = false)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Builder
 public class BcMsg extends BaseEntity {
 
     private String domSist;

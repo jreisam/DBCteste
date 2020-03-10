@@ -2,10 +2,7 @@ package com.jreis.teste.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.jreis.teste.domain.base.BaseEntity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 
@@ -15,6 +12,7 @@ import javax.persistence.Entity;
 @Entity
 @EqualsAndHashCode(callSuper = false)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Builder
 public class GrupoSeq extends BaseEntity {
 
     private String numSeq;

@@ -43,4 +43,9 @@ public class BcmsgController {
                 .build();
     }
 
+/*    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable("Id") Long id){
+        bcmsgService.delete(id)
+    }*/
+
 }

@@ -53,8 +53,7 @@ public class UploadFileService {
             SlcRequest slcRequest = xmlMapper.readValue(file, SlcRequest.class);
             BcMsg bcMsg = modelMapper.map(slcRequest.getBcMsg(), BcMsg.class);
             SisMsg sisMsg = modelMapper.map(slcRequest.getSisMsg(), SisMsg.class);
-//TODO: INSPECIONAR sisMsg não está recebendo atribuições corretas de seus respectivos campos.
-// Consequentemente não salva todos os campos filhos da árvore do documento.
+
             bcMsgRepository.save(bcMsg);
             sisMsgRepository.save(sisMsg);
 
