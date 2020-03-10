@@ -110,9 +110,9 @@ class BcMsg extends React.Component {
                 <td>{this.props.bcmsg.domSist}</td>
                 <td>{this.props.bcmsg.identdEmissor}</td>
                 <td>{this.props.bcmsg.identdDestinatario}</td>
-                <td>
+           {/*     <td>
                     <button className="btn btn-danger" onClick={this.deleteBcMsg}>Delete</button>
-                </td>
+                </td>*/}
             </tr>
         );
     }
