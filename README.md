@@ -23,9 +23,9 @@ Para Rodar em "localhost":
 2 - Modificar referências `https://dbcjreis-app.herokuapp.com/` para `http://localhost:8080/` em arquivo 
     `./webapp/frontend/mainPage.jsx`
 
-2 - Rodar Dev: "`mvn -N io.takari:maven:0.7.7:wrapper` e então `mvnw clean spring-boot:run`
+2 - Rodar Dev: `mvn -N io.takari:maven:0.7.7:wrapper` e então `mvnw clean spring-boot:run`
 
-3 - Rodar build: "`mvn package`" "`java -jar {diretório target}\DBCjreis-0.0.1-SNAPSHOT.jar`
+3 - Rodar build: `mvn package` `java -jar {diretório target}\DBCjreis-0.0.1-SNAPSHOT.jar`
 
 4 - para visualizar o banco: `http://localhost:8080/h2-console`, login `admin` senha `1234` 
 
