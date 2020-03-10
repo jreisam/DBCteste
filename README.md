@@ -13,7 +13,7 @@ Projeto teste para DBC: Carregar arquivo .xml, extrair seus dados e os persistir
          Output:
             Banco em memória (H2) salvando todos os dados do arquivo XML e apresentando os dados de alguns
             campos (grupo "BcMsg") em lista na single-page. Detalhes ou os dados completos, estão disponíveis
-             em seu Swagger https://dbcjreis-app.herokuapp.com/swagger-ui.html. 
+             via API's (mapeamento disponível em https://dbcjreis-app.herokuapp.com/swagger-ui.html ). 
          Teste:
             Testes disponíveis para validação do arquivo XML e de modelo BcMsg.
 Para Rodar em "localhost":            
@@ -27,7 +27,7 @@ Para Rodar em "localhost":
 
 3 - Rodar build: `mvn package` `java -jar {diretório target}\DBCjreis-0.0.1-SNAPSHOT.jar`
 
-4 - para visualizar o banco: `http://localhost:8080/h2-console`, login `admin` senha `1234` 
+4 - para visualizar o banco: `http://localhost:8080/h2-console`, database: `jdbc:h2:mem:testedb` login `admin` senha `1234` 
 
 5 - Swagger: `http://localhost:8080/swagger-ui.html#/`
 
