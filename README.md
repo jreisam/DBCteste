@@ -12,7 +12,7 @@ Projeto teste para DBC: Carregar arquivo .xml, extrair seus dados e os persistir
             de camadas organizadas. 
          Output:
             Banco em memória (H2) salvando todos os dados do arquivo XML e apresentando os dados de alguns
-            campos (grupo "BcMsg") em lista na singe-page. Detalhes ou os dados completos, estão disponíveis
+            campos (grupo "BcMsg") em lista na single-page. Detalhes ou os dados completos, estão disponíveis
              em seu Swagger https://dbcjreis-app.herokuapp.com/swagger-ui.html. 
          Teste:
             Testes disponíveis para validação do arquivo XML e de modelo BcMsg.
@@ -33,7 +33,7 @@ Para Rodar em "localhost":
 
 6 - caso haja erro ao buildar, tente `yarn add webpack --dev` para atualizar o packager
 
-Para verificação de build "up and running" online, url Heroku: `https://dbcjreis-app.herokuapp.com/`\
+Para verificação de build "up and running" online, url Heroku: `https://dbcjreis-app.herokuapp.com/`
 
 Tecnologias usadas:
 * ReactJSX / Bootstrap
