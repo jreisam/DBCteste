@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dbc.jreis.test</groupId>
-    <artifactId>DBCjreis</artifactId>
+    <groupId>dbc.jreis.ticket</groupId>
+    <artifactId>JreisTicket</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>DBCjreis</name>
-    <description>projeto teste para DBC: carrega arquivo .xml, extrai seus campos e os persiste em banco H2. Por fim
-        disponibiliza api REST para acesso aos dados.
+    <name>JreisTicket</name>
+    <description>Projeto teste para a empresa Ticket: Persistir dados de "cidade" / "estado", considerando suas regras de negócios respectivas,
+        disponibilizando insert em batch e apresentando uma single page no front end com comportamento também definido pela prova prática designada.
     </description>
 
     <parent>
@@ -26,7 +26,7 @@
         <java.version>1.8</java.version>
 
         <!-- versions-->
-        <frontend-src-dir>${project.basedir}/src/main/webapp/frontend</frontend-src-dir>
+        <frontend-src-dir>${project.basedir}/src/main/webapp/singlepage/public</frontend-src-dir>
         <node.version>v12.3.1</node.version>
         <yarn.version>v1.16.0</yarn.version>
         <frontend-maven-plugin.version>1.7.6</frontend-maven-plugin.version>
