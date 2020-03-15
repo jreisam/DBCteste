@@ -1,13 +1,11 @@
 package dbc.jreis.ticket.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import dbc.jreis.ticket.model.base.BaseEntity;
 import lombok.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,17 +14,20 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = false)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Builder
-public class Estado extends BaseEntity {
-
+@Table(name = "ESTADO")
+public class Estado {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String nome;
     private String codNome;
-    private String imgName;
+    private String imgNome;
 
-
-    @OneToMany(cascade = {CascadeType.MERGE})
-    private List<Cidade> cidades;
+    @OneToMany
+    @JoinColumn(name="ESTADO_ID", referencedColumnName="id")
+    private Set<Cidade> cidades;
 
     public String toJson() {
-        return "{nome: " + nome + ", codNome:" + codNome + ", imgName: " + imgName + "}";
+        return "{nome: " + nome + ", codNome:" + codNome + ", imgName: " + imgNome + "}";
     }
 }

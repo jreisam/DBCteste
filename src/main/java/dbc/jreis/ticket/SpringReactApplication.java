@@ -16,7 +16,7 @@ public class SpringReactApplication {
         SpringApplication.run(SpringReactApplication.class, args);
     }
 
-
+/*
     @Component
     public class DatabaseLoader implements CommandLineRunner {
         // teste
@@ -32,5 +32,5 @@ public class SpringReactApplication {
             this.estadoRepository.save(new Estado("Santa Catarina", "santacatarina", "bandeiraSC", null));
             this.estadoRepository.save(new Estado("Paraná", "parana", "bandeiraPN", null));
         }
-    }
+    }*/
 }
